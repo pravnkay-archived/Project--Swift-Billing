@@ -1,0 +1,250 @@
+@page {
+	size: 8.5in 11in; 
+	/* <length>{1,2} | auto | portrait | landscape */ 
+	/* 'em' 'ex' and % are not allowed; length values are width height */
+	
+	margin: 1.3cm;
+	/* <any of the usual CSS values for margins> */
+	/*(% of page-box width for LR, of height for TB) */
+	
+	margin-header: 0mm; 
+	/* <any of the usual CSS values for margins> */
+	
+	margin-footer: 0mm;
+	/* <any of the usual CSS values for margins> */
+	
+	marks: none ;
+	/*crop | cross | none*/
+	
+	/* header: html_invoiceHeader; */
+	footer: html_invoiceFooter;
+	/* background: ;
+	background-image: ;
+	background-position ;
+	background-repeat ;
+	background-color ;
+	background-gradient: ; */
+}
+
+@page :first {
+    header: html_invoiceHeader;
+}
+
+@page :right {
+	margin-top: 0cm;
+	margin-bottom: 2cm;
+}
+
+@page :left {
+	margin-top: 2cm;
+	margin-bottom: 2cm;
+}
+
+/* ---------- General Styles ---------- */
+body.template_2 td{	
+	font-size: 12px !important;
+}
+
+.intro_info th, .intro_info td, .pricing_table th, .pricing_table td, .notes_table {
+	font-size: 12px;
+	
+}
+
+.t-cap {
+	text-transform: capitalize;
+}
+.t-up {
+	text-transform: uppercase;
+}
+
+
+table {
+  border-spacing:0;
+  border-collapse:collapse;
+}
+
+/* ---------- Top Heading Invoice ---------- */
+#top_header {
+	color: #D53021;
+	text-transform: uppercase;
+	text-align: center;
+	min-width: 100%;
+	font-size: 30px;	
+}
+
+/* ---------- Top Left Corner box - attached as image ---------- */
+.invoice_for{
+	text-align: right;
+	padding-bottom: 0.5cm;
+}
+
+/* ---------- General Border Styles ---------- */
+table {
+	width: 100%;
+}
+
+table, table td {
+	border: 1px solid rgba(82, 86, 89, 0.49);
+}
+
+table.no_border{
+	border: none;
+}
+
+table.no_row_border td{
+	border: none;
+}
+
+table tr.no_border td {
+	border: none;
+}
+
+td.v_top {
+	vertical-align: top;
+}
+
+/* ---------- Triple details class : three cells with a colon in middle cell styling ---------- */
+tr.triple_details td:nth-child(1){
+	width: 50%;
+}
+
+tr.triple_details td:nth-child(2){
+	width: 4%;
+}
+
+/* ---------- Company Name ---------- */
+.company_name{
+	font-size: 46px;
+	color: #D53021;
+	margin-bottom: 15px;
+}
+
+/* ---------- Company Address ---------- */
+.company_address {
+	line-height: 10px;
+}
+
+/* ---------- Products Table - General Styles ---------- */
+.pricing_table {
+	margin-top: 1cm;
+	margin-bottom: 1cm;
+	border: 1px solid rgba(82, 86, 89, 0.49);
+	text-align: center
+}
+
+/* ---------- Enabling and Styling border for Pricing table ---------- */
+.pricing_table td, .pricing_table th {
+	border: 1px solid rgba(82, 86, 89, 0.49);
+}
+
+/* ---------- Setting widths of the products list in pricing table ---------- */
+.pricing_thr th:nth-child(1) {	width: 4% !important;	}
+.pricing_thr th:nth-child(2) {	width: 20% !important;	}
+.pricing_thr th:nth-child(3) {	width: 6% !important;	}
+.pricing_thr th:nth-child(4) {	width: 6% !important;	}
+.pricing_thr th:nth-child(5) {	width: 6% !important;	}
+.pricing_thr th:nth-child(6) {	width: 6% !important;	}
+.pricing_thr th:nth-child(7) {	width: 10% !important;	}
+.pricing_thr th.igst {	width: 8% !important;	}
+.pricing_thr th.cgst {	width: 8% !important;	}
+.pricing_thr th.sgst {	width: 8% !important;	}
+.pricing_thr th.cess {	width: 8% !important;	} 
+.pricing_thr th:nth-last-child(1) {	width: 10% !important;	}
+
+/* ---------- Aligning content of description to left ---------- */
+.pricing_table tbody tr td:nth-child(2) {
+	text-align: left;
+}
+
+/* ---------- Aligning cell 'TOTAL' to right and padding ---------- */
+.pricing_table .total_row td:nth-child(1) {
+	padding: 0 .5cm 0 0 ;
+	text-align: right;
+}
+
+/* ---------- Bank Details table general styles ---------- */
+table.bank_details {
+	text-align: left;
+}
+
+/* ---------- Bank deatails table - padding for heading ---------- */
+td.bank_details_heading {
+	padding: 0 0 .2cm .05cm;
+}
+
+/* ---------- Bank details table - width of first cell ---------- */
+.bank_details_cell1{
+	width: 50%;
+}
+
+/* ---------- Custom Triple details width for bank details ---------- */
+table.bank_details .triple_details td:nth-child(1) {
+	width: 35%;
+}
+table.bank_details .triple_details td:nth-child(2) {
+	width: 5%;
+}
+
+/* ---------- Total Value cell ---------- */
+td.total{
+	padding: 0 .5cm 0 0 ;
+	text-align: right;
+}
+
+td.total_val{
+	text-align: center;
+	padding: 0 0 0 0 ;
+}
+
+td.amount_in_words{
+	text-align: left;
+	padding: .25cm 0 .25cm .1cm;
+}
+
+td.amount_in_words_val{
+	text-align: left;
+	padding: .25cm 0 .25cm .1cm;
+}
+
+td.net_amount{
+	padding: 0 .5cm 0 0 ;
+	text-align: right;
+	font-weight: bold;
+}
+
+td.net_amount_val {
+	text-align: center;
+	padding: 0 0 0 0 ;
+}
+
+/* ---------- Notes and TC cell - defining width % based on first 8 cell width of pricing table ---------- */
+table.notes_table {
+	min-width: 100%;
+	max-width: 100%;
+	width: 100%;
+}
+
+table.notes_table tbody tr td:nth-child(2) {
+	min-width: 34%;
+	max-width: 34%;
+	width: 34%;
+}
+
+
+table.notes_table .notes_heading, .notes_content, .tc_heading, .tc_content{
+	padding-bottom: 0.2cm;
+}
+
+/* ---------- Signature space alignment ---------- */
+table.notes_table tbody tr td:nth-child(2) {
+	vertical-align: bottom;
+	text-align: right;
+}
+
+table.sign .sign_forcompany {
+	padding-bottom: .5cm;
+}
+
+table.sign .sign_signline {
+	padding-bottom: .1cm;
+}

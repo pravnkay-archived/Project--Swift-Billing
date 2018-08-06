@@ -1,0 +1,140 @@
+.invoice-products-table table {
+	margin-bottom: 0rem !important;
+}
+
+.invoice-products-table table th{
+	background-color: #F3F4F6;
+}
+
+.invoice-products-table table thead th {
+	border-left: 1px solid #dee2c6;
+	border-top: 1px solid #dee2c6 !important;
+	border-right: 1px solid #dee2c6;
+	vertical-align: middle;
+}
+
+.invoice-products-table table tbody tr td {
+	border: 1px solid #dee2c6 !important;
+	vertical-align: middle;
+}
+
+.invoice-products-table table tbody tr td.no-border {
+	border: none !important;
+}
+
+.table-body-fixed {
+	position: absolute;
+	top: 0px;
+	right: 0;
+	min-width: 150px;
+	max-width: 150px;
+	overflow: auto;
+	margin-right: .9375rem;
+	box-shadow: -15px 0 22px -11px transparent;
+	transition: box-shadow .3s;
+	background-color: #fff;
+}
+
+.table-shadow {
+	box-shadow: -15px 0 22px -11px rgba(0,0,0,.3);
+}
+
+.table-body-fixed .delete-row-cell {
+	border: none !important;
+}
+
+.table-body-scrollable{
+	width: calc(100% - 150px);
+}
+
+.product-detail-cell, .invoice-total-cell {
+	padding: 0 !important;	
+}
+
+.product-detail-cell#description {
+	min-width: 200px;
+}
+.product-detail-cell#description>input {
+	max-width: 90%;
+}
+.product-detail-cell#hsn {
+	min-width: 100px;
+}
+.product-detail-cell#quantity {
+	min-width: 60px;
+}
+.product-detail-cell#unit {
+	min-width: 120px;
+}
+.product-detail-cell#saleValue {
+	min-width: 80px;
+}
+.product-detail-cell#taxableValue {
+	min-width: 85px;
+}
+.product-detail-cell#taxRate {
+	min-width: 95px;
+}
+.product-detail-cell#igstValue {
+	min-width: 80px;
+}
+.product-detail-cell#cgstValue {
+	min-width: 80px;
+}
+.product-detail-cell#sgstValue {
+	min-width: 80px;
+}
+.product-detail-cell#cessRate {
+	min-width: 80px;
+}
+.product-detail-cell#cessValue {
+	min-width: 80px;
+}
+
+.product-detail-cell#invoiceSerial>input, .product-detail-cell#description>input, .product-detail-cell#hsn>input, .product-detail-cell#quantity>input, .product-detail-cell#unit>select, .product-detail-cell#saleValue>input, .product-detail-cell#discountRate>input, .product-detail-cell#discountValue>input, .product-detail-cell#taxableValue>select, .product-detail-cell#taxRate>input {
+	height: 87px;
+}
+
+.table-cell-input, .table-cell-total {
+	border: none;
+    margin: 0;
+	width: 100%;
+	padding: .75rem;
+}
+
+a.delete-row-link {
+	position: relative;
+	display: inline-block;
+  }
+
+a.delete-row-link:after {
+	content: ""; 
+	position: absolute; 
+	top: 0; 
+	right: 0; 
+	bottom: 0; 
+	left: 0;
+  }
+
+
+  .invoice-products-table table td input[readonly='readonly'], .invoice-products-table table td input[readonly], .invoice-products-table table td select[readonly='readonly'] {
+
+	background: #E9ECEF;
+	pointer-events: none;
+
+  }
+
+  td.product-detail-cell.readonly-cell {
+	background: #E9ECEF;
+  }
+
+  td.invoice-total-cell.readonly-cell, td.invoice-total-cell.readonly-cell > input[readonly] {
+	background: #FFFCD7;
+	pointer-events: none;
+  }
+
+  .roundOffValue, .grandValue {
+	  max-width: 108px;
+	  border: none;
+	  background-color: inherit !important;
+  }

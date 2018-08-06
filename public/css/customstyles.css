@@ -1,0 +1,122 @@
+.bttn-plain {
+	background-color: transparent;
+	color: #222;
+	font-weight: 600 !important;
+	border: none;
+}
+
+.bttn-plain i {
+	font-size: 20px;
+}
+
+.bttn-plain:focus {
+	box-shadow: none !important;
+}
+.bttn-plain:hover, .bttn-plain:focus {
+	text-decoration: none;
+}
+
+table td, table tbody th {
+	vertical-align: inherit !important;
+}
+
+table td, table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+table thead th {
+    border-top: none !important;
+}
+
+
+form.delete_form {
+	display: inline-block !important;
+}
+
+
+form span.form-error-message {
+	color: #d41919;
+	transition: all 0.5s ease;
+}
+form span.form-error-message.d-inline {
+	animation: yourCustomAnimation 5s;
+	animation-fill-mode: both
+}
+
+form .form-error-field, form .form-error-field:focus {
+	border-color: #bf1a1a;
+	box-shadow: 0 0 0 0.2rem rgba(238, 106, 106, 0.25);
+	
+	animation: yourCustomAnimation 5s;
+	animation-fill-mode: both
+}
+form input, form input:focus {	
+	animation: yourCustomAnimation 5s;
+	animation-fill-mode: both
+}
+
+@keyframes opacityAnimation {
+	from {
+		transform:scale(0.7);
+		opacity:0
+	}
+	to {
+		transform: scale(1);
+		opacity:1
+	}
+}
+
+
+select[readonly] {
+	pointer-events: none;
+}
+
+.t-cap {
+	text-transform: capitalize;
+}
+
+.t-up {
+	text-transform: uppercase;
+}
+
+.t-low {
+	text-transform: lowercase;
+}
+
+.view-form-label {
+	font-size: 16px;
+	text-decoration: underline;
+}
+.view-form-label>span {
+	font-size: 18px;
+}
+
+.bfh-datepicker .input-group-addon {
+	display: none;
+}
+
+a, a:hover, a:focus {
+	text-decoration: none !important;
+}
+
+textarea[readonly], textarea[readonly='readonly'], input[readonly], input[readonly='readonly'], select[readonly], select[readonly='readonly'] {
+
+	background: #E9ECEF;
+	pointer-events: none;
+
+  }
+
+.col-form-label {
+    font-size: 0.95rem;
+}
+
+.form-control {
+    font-size: 0.8rem;
+}
+
+.form-control.input-error, .form-control.input-error:focus {
+	border: 1px solid #bf1a1a;
+	box-shadow: 0 0 0 0.08rem rgba(191, 26, 26, 0.4);
+}
