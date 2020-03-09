@@ -18,15 +18,15 @@ class UserTableSeeder extends Seeder
 
         $admin = new User();
         $admin->name = 'Admin';
-        $admin->email = 'admin@pravnkay.com';
-        $admin->password = bcrypt('Openme.16');
+        $admin->email = 'admin@swiftbilling.com';
+        $admin->password = bcrypt('adminpass01');
         $admin->save();
         $admin->roles()->attach($role_admin);
 
         $user = new User();
         $user->name = 'User';
         $user->email = 'user@swiftbilling.com';
-        $user->password = bcrypt('Openme.16');
+        $user->password = bcrypt('userpass01');
         $user->save();
         $user->roles()->attach($role_user);
 
